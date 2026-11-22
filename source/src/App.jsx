@@ -3,7 +3,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Lenis from 'lenis'
 import qrcode from 'qrcode-generator'
-import { COUPLE, DATE_ISO, DATE_TEXT, VENUE, ORDER, PHOTOS, GIFTS, PROPOSAL_VIDEO, PROPOSAL_POSTER, ENTRANCE_PHOTO, naira } from './config'
+import { COUPLE, DATE_ISO, DATE_TEXT, VENUE, ORDER, PHOTOS, GIFTS, PROPOSAL_VIDEO, PROPOSAL_POSTER, NIGHT_PHOTOS, ENTRANCE_PHOTO, naira } from './config'
 import { scroll, useUI } from './store'
 import { register, give, myPass, watch, canEdit } from './data'
 import { placeholderPhoto } from './paint'
@@ -69,7 +69,7 @@ function Life({ gl }) {
     <section id="life" className="sec dark static-life"><div className="wrap"><span className="eyebrow">A peep into our life</span><h2 className="h2">Little moments, in order.</h2>
       <div className="stills">{PHOTOS.map((p, i) => <figure key={i}><img alt="" src={p.src || placeholderPhoto(i, 600, 750, `Photo ${i + 1}`).toDataURL('image/jpeg', .8)} /><figcaption>{p.caption}</figcaption></figure>)}</div></div></section>)
   return (
-    <section id="life" className="sec dark tall" style={{ height: `${PHOTOS.length * 90}svh` }}>
+    <section id="life" className="sec dark tall" style={{ height: `${PHOTOS.length * 60}svh` }}>
       <div className="sticky">
         <div className="life-head"><span className="eyebrow">A peep into our life</span><span className="eyebrow num">{String(idx + 1).padStart(2, '0')} / {String(PHOTOS.length).padStart(2, '0')}</span></div>
         <div className="life-cap"><Typewriter text={PHOTOS[idx]?.caption || ''} /></div>
@@ -84,6 +84,10 @@ function Film() {
       <Split as="h2" className="h2" text="The night we said yes." />
       <div className="film" data-reveal>{PROPOSAL_VIDEO ? <video src={PROPOSAL_VIDEO} poster={PROPOSAL_POSTER} controls playsInline preload="none" /> :
         <div className="film-ph"><div className="play" aria-hidden="true" /><p>Our proposal film is on its way. It will play right here.</p></div>}</div>
+      <div className="night">
+        <span className="eyebrow" data-reveal>That night, in pictures</span>
+        <div className="night-wall">{NIGHT_PHOTOS.map((p, i) => <figure key={i} className={p.w > p.h ? 'wide' : 'tall'} data-reveal><img src={p.src} alt="" loading="lazy" decoding="async" width={p.w * 300} height={p.h * 300} /></figure>)}</div>
+      </div>
     </div></section>)
 }
 

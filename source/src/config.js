@@ -14,15 +14,28 @@ export const ORDER = [
 // "A peep into our life". src: null shows a placeholder until the real photo arrives.
 export const PHOTOS = [
   { src: 'media/life01.jpg', caption: 'May 2025. One monument, two people, and the start of a very full camera roll.' },
-  { src: 'media/life02.jpg', caption: 'Sunshine, matching smiles, and nowhere else to be.' },
-  { src: 'media/life03.jpg', caption: 'By the sea, we made a heart with our hands and meant it.' },
-  { src: 'media/life04.jpg', caption: 'Dressed up, sitting pretty, standing tall.' },
-  { src: 'media/life05.jpg', caption: 'An ordinary street, an ordinary day. With you, enough.' },
-  { src: 'media/life06.jpg', caption: 'Still taking selfies. Still smiling like that.' },
-  { src: 'media/life07.jpg', caption: 'Black and white, and holding on.' },
-  { src: 'media/life08.jpg', caption: 'Late nights, good company, better company.' },
-  { src: 'media/life09.jpg', caption: 'Cap, gown, and the proudest person in the frame.' },
-  { src: 'media/life10.jpg', caption: 'And then, he knelt.' }
+  { src: 'media/life02.jpg', caption: 'Same monument, one more photo. We were never going to take just one.' },
+  { src: 'media/life03.jpg', caption: 'Sunshine, matching smiles, and nowhere else to be.' },
+  { src: 'media/life04.jpg', caption: 'Shades on, music up, going wherever you are going.' },
+  { src: 'media/life05.jpg', caption: 'Blue lenses, a big grin, and someone sneaking into the frame.' },
+  { src: 'media/life06.jpg', caption: 'By the sea, one of us led and the other followed.' },
+  { src: 'media/life07.jpg', caption: 'We made a heart with our hands and meant it.' },
+  { src: 'media/life08.jpg', caption: 'Toes in the sand, side by side.' },
+  { src: 'media/life09.jpg', caption: 'Dressed up, sitting pretty, standing tall.' },
+  { src: 'media/life10.jpg', caption: 'Mirror selfies, because one of us always has the phone.' },
+  { src: 'media/life11.jpg', caption: 'Late night, sweet treats, silly faces.' },
+  { src: 'media/life12.jpg', caption: 'Same night. Still silly.' },
+  { src: 'media/life13.jpg', caption: 'An ordinary street, an ordinary day. With you, enough.' },
+  { src: 'media/life14.jpg', caption: 'Every stairwell is a photoshoot with the right person.' },
+  { src: 'media/life15.jpg', caption: 'Still taking selfies. Still smiling like that.' },
+  { src: 'media/life16.jpg', caption: 'Black and white, and dressed for the occasion.' },
+  { src: 'media/life17.jpg', caption: 'Black and white, and holding on.' },
+  { src: 'media/life18.jpg', caption: 'One more, because the hat deserved it.' },
+  { src: 'media/life19.jpg', caption: "You drive. I'll handle the camera." },
+  { src: 'media/life20.jpg', caption: 'Late nights, good company, better company.' },
+  { src: 'media/life21.jpg', caption: 'Same corner, a little closer.' },
+  { src: 'media/life22.jpg', caption: 'Cap, gown, and the proudest person in the frame.' },
+  { src: 'media/life23.jpg', caption: 'And then, he knelt.' }
 ]
 export const ENTRANCE_PHOTO = 'media/entrance.jpg'
 export const PROPOSAL_VIDEO = 'media/proposal.mp4'
@@ -42,3 +55,18 @@ export const naira = n => '₦' + Math.round(n || 0).toLocaleString('en-NG')
 
 // Full-bleed background photo (register section)
 export const BG_PHOTO = 'media/bg.jpg'
+
+// The proposal night, shown as a photo wall under the film
+export const NIGHT_PHOTOS = [
+  { src: 'media/night01.jpg', w: 3, h: 2 },
+  { src: 'media/night02.jpg', w: 2, h: 3 },
+  { src: 'media/night03.jpg', w: 3, h: 2 },
+  { src: 'media/night04.jpg', w: 2, h: 3 },
+  { src: 'media/night05.jpg', w: 3, h: 2 },
+  { src: 'media/night06.jpg', w: 3, h: 2 },
+  { src: 'media/night07.jpg', w: 2, h: 3 },
+  { src: 'media/night08.jpg', w: 3, h: 2 },
+  { src: 'media/night09.jpg', w: 2, h: 3 },
+  { src: 'media/night10.jpg', w: 2, h: 3 },
+  { src: 'media/night11.jpg', w: 3, h: 2 }
+]
