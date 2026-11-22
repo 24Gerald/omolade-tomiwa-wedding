@@ -159,12 +159,13 @@ function Showroom({ m }) {
     const portrait = viewport.aspect < .9, n = GIFTS.length
     const seg = s.p * (n - 1), i = Math.min(Math.floor(seg), n - 2), t = seg - i
     const at = i + smooth(clamp((t - .25) / .5))
-    ref.current.position.x = THREE.MathUtils.damp(ref.current.position.x, -at * GAP + (portrait ? 0 : 2.2), 6, dt)
-    ref.current.position.y = portrait ? -.05 : -1.6
     const sc = portrait ? Math.min(.74, viewport.width / 5.2) : .9
     ref.current.scale.setScalar(sc)
+    // children sit at k * GAP inside a scaled group, so the slide must be scaled too or the 3D runs ahead of the text
+    ref.current.position.x = THREE.MathUtils.damp(ref.current.position.x, -at * GAP * sc + (portrait ? 0 : 2.2), 6, dt)
+    ref.current.position.y = portrait ? -.05 : -1.6
     ref.current.rotation.x = .12
-    const idx = Math.round(seg); if (useUI.getState().giftIndex !== idx) setGiftIndex(idx)
+    const idx = Math.round(at); if (useUI.getState().giftIndex !== idx) setGiftIndex(idx)
     turns.current.forEach((g, k) => { if (g) g.rotation.y = THREE.MathUtils.damp(g.rotation.y, (k === idx ? .35 : -.25) + Math.sin(st.clock.elapsedTime * .4 + k) * .12 + scroll.pointer.x * .25, 2.5, dt) })
   })
   return (
