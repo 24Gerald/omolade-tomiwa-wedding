@@ -1,9 +1,11 @@
+/* Tan is self-hosted: drop the licensed file at fonts/tan.woff2 (or .otf) next to index.html. Until then headings fall back to Bodoni Moda. */
+@font-face { font-family: "Tan"; src: url(fonts/tan.woff2) format("woff2"), url(fonts/tan.otf) format("opentype"); font-display: swap; }
 /* Layout: a fixed WebGL stage under a column of full-bleed chapters; sticky chapters (life, gifts) pin while the 3D moves. Light editorial ivory with espresso and wine chapters. */
 :root {
   --ivory: #f3efe7; --ivory-2: #e9e3d8; --ink: #1b1714; --ink-2: #6a625a; --espresso: #16110e;
   --wine: #4a141c; --wine-2: #6b1e28; --gold: #c9a46a; --gold-2: #e2bf7e; --line: rgba(27,23,20,.16);
-  --display: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
-  --body: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --display: "Tan", "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+  --body: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
   color-scheme: light;
 }
